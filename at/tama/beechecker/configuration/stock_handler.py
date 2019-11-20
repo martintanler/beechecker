@@ -87,12 +87,12 @@ class StockHandler:
                                   command=lambda: self._open_calibration_dialog(hive))
 
         update_button = Button(self._frame, text="Speichern", background="#ccffff", width="15",
-                               command=lambda: self._update_hive(hive, name_txt.get(),
-                                                                 temp_in_txt.get(), temp_in_prd_txt.get(),
-                                                                 temp_out_txt.get(), temp_out_prd_txt.get(),
-                                                                 hum_in_txt.get(), hum_in_prd_txt.get(),
-                                                                 hum_out_txt.get(), hum_out_prd_txt.get(),
-                                                                 weight_txt.get(), weight_prd_txt.get(),
+                               command=lambda: self._update_hive(hive, name_txt.get().strip(),
+                                                                 temp_in_txt.get().strip(), temp_in_prd_txt.get().strip(),
+                                                                 temp_out_txt.get().strip(), temp_out_prd_txt.get().strip(),
+                                                                 hum_in_txt.get().strip(), hum_in_prd_txt.get().strip(),
+                                                                 hum_out_txt.get().strip(), hum_out_prd_txt.get().strip(),
+                                                                 weight_txt.get().strip(), weight_prd_txt.get().strip(),
                                                                  update_button, delete_button, calibrate_button, i))
         change_function = lambda a: self._hive_val_changed(hive, update_button, delete_button, i)
 
