@@ -190,7 +190,8 @@ class CalibrationDialog (BeeDialog):
 
     def _calc_temp(self):
         temp_sensor = self._hive.get_temperature_outside()
-        if temp_sensor.get_bcm() is None or temp_sensor.get_product() is None:
+        
+        if temp_sensor.get_bcm() == '' or temp_sensor.get_product() == '':
             return
         
         if temp_sensor.get_product() == 'DHT22':
@@ -267,7 +268,4 @@ class CalibrationDialog (BeeDialog):
             clean()
             self._close_enabled = True
             self._calibration.offset = None
-
-        
-        
-
+            
