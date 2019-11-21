@@ -44,7 +44,7 @@ if beekeeper is not None:
                 hx.reset()
                 #print('_offset:', calibration.offset)
                 hx.set_offset(calibration.offset)
-                hive_data.set_weight(hx.get_weight(5))
+                hive_data.set_weight(hx.get_weight(5)/1000)
                 clean()
             except Exception as e:
                 clean()
