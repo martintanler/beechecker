@@ -1,4 +1,7 @@
 #!/bin/bash 
+sudo apt-get update
+sudo apt-get install python3-pip
+sudo python3 -m pip install --upgrade pip setuptools wheel
 cd /home/pi
 git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 cd Adafruit_Python_DHT
