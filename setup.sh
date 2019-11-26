@@ -1,5 +1,7 @@
 #!/bin/bash 
 sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get install sqlite3
 sudo apt-get install python3-pip
 sudo python3 -m pip install --upgrade pip setuptools wheel
 cd /home/pi
