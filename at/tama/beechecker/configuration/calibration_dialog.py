@@ -196,11 +196,13 @@ class CalibrationDialog (BeeDialog):
         
         if temp_sensor.get_product() == 'DHT22':
             self._humidity, self._calibration.temp = dht.read_retry(dht.DHT22, int(temp_sensor.get_bcm()))
+            print('Temp={0:0.1f}*C  Humidity={1:0.1f}%'.format(self._calibration.temp, self._humidity))
         elif temp_sensor.get_product() == 'DHT11':
             self._humidity, self._temp = dht.read_retry(dht.DHT11, int(temp_sensor.get_bcm()))
+            print('Temp={0:0.1f}*C  Humidity={1:0.1f}%'.format(self._calibration.temp, self._humidity))
         else:
             print('Unsupported product ', temp_sensor.get_product())
-        print('Temp={0:0.1f}*C  Humidity={1:0.1f}%'.format(self._calibration.temp, self._humidity))
+        
 
     def _check_weight(self):
         try:
